@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title >Spoti hi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo.png">
+    <link rel="stylesheet" href="progressbar.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="brand"><img src="logo.png" alt="spotify" title="spotify">Spotify</li>
+        </ul>
+        <ul class="menu">
+            <li>Home</li>
+            <li>About</li>
+        </ul>
+        
+    </nav>
+
+    <div class="container">
+        <div class="songList">
+            <h3>Best of NCS - No Copyright Sounds</h3>
+            <div>
+                <div class="songItem" for="play">
+                    <img src="covers/1.jpg" alt="True Love">
+                    <span class="songName"> Let me love you </span>
+                    <span class="sontlistplay">
+                        <span class="timeStamp">06:09
+                            <div class="songItemPlay" id="1">
+                                <i class="far fa-1x fa-circle-play" id="1"></i>
+                            </div>
+                        </span>
+                    </span>
+                </div>
+                <div class="songItem" for="play">
+                    <img src="covers/2.jpg" alt="True Love">
+                    <span class="songName">Let me love you </span>
+                    <span class="sontlistplay">
+                        <span class="timeStamp">06:09
+                            <div class="songItemPlay" id="2">
+                                <i class="far fa-1x fa-circle-play" id="2"></i>
+                            </div>
+                        </span>
+                    </span>
+                </div>
+                <div class="songItem" for="play">
+                    <img src="covers/10.jpg" alt="True Love">
+                    <span class="songName">Let me love you </span>
+                    <span class="sontlistplay">
+                        <span class="timeStamp">06:09
+                            <div class="songItemPlay" id="3">
+                                <i class="far fa-1x fa-circle-play" id="3"></i>
+                            </div>
+                        </span>
+                    </span>
+                </div>
+                <div class="songItem" for="play">
+                    <img src="covers/10.jpg" alt="True Love">
+                    <span class="songName">Let me love you </span>
+                    <span class="sontlistplay">
+                        <span class="timeStamp">06:09
+                            <div class="songItemPlay" id="4">
+                                <i class="far fa-1x fa-circle-play" id="4"></i>
+                            </div>
+                        </span>
+                    </span>
+                </div>
+                <div class="songItem" for="play">
+                    <img src="covers/10.jpg" alt="True Love">
+                    <span class="songName">Let me love you </span>
+                    <span class="sontlistplay">
+                        <span class="timeStamp">06:09
+                            <div class="songItemPlay" id="5">
+                                <i class="far fa-1x fa-circle-play" id="5"></i>
+                            </div>
+                        </span>
+                    </span>
+                </div>
+                <div class="songItem" for="play">
+                    <img src="covers/6.jpg" alt="True Love">
+                    <span class="songName">Let me love you </span>
+                    <span class="sontlistplay">
+                        <span class="timeStamp">06:09
+                            <div class="songItemPlay" id="6">
+                                <i class="far fa-1x fa-circle-play" id="6"></i>
+                            </div>
+                        </span>
+                    </span>
+                </div>
+                    
+            </div>
+        </div>
+        <div class="songBanner"></div>
+    </div>
+
+    <div class="bottom">
+        <div class="progressContainer">
+        <div class="progressFill" id="progressFill"></div>
+        <input type="range" name="range" id="myProgressBar" value="0" min="0" max="100">
+        </div>
+        <div class="icons">
+            <!-- fontawesome icons -->
+            <div class="masterBackward" id="previous" ><i class="fa-solid fa-2x fa-backward-fast"></i></div>
+            <div id="masterPlay" class="playToggle">
+                <i class="fa-solid fa-2x fa-circle-play iconPlay"></i>
+                <i class="fa-solid fa-2x fa-circle-pause iconPause" style="display:none;"></i>
+            </div>
+            <div class="masterForward" id="forward"><i class="fa-solid fa-2x fa-forward-fast"></i></div> 
+
+        </div>
+        <div class="songInfo">
+            <img src="playing.gif" width="42px" alt="" id="gif"> <span id="masterSongName"> Let me love you - Justin Beiber </span>
+            <span id="masterCurrentTime">0:00</span> / <span id="masterMaxDuration">0:00</span>
+        </div>
+    </div>
+
+    
+    <script src="script.js"></script>    
+    <script src="https://kit.fontawesome.com/2d6483e143.js" crossorigin="anonymous"></script>
+</body>
+</html>

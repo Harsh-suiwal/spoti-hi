@@ -1,0 +1,93 @@
+/* Spotify-style progress bar - overlay div approach */
+ 
+.progressContainer {
+    position: relative;   /* THIS was missing - anchors .progressFill correctly */
+    width: 80vw;
+    height: 4px;
+    display: flex;
+    align-items: center;
+}
+ 
+/* track background, sits behind the fill */
+.progressContainer::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 4px;
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 0.3);
+}
+ 
+.progressFill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4px;
+    border-radius: 2px;
+    background: #1DB954;
+    width: 0%;
+    transition: width 0.25s linear;
+    pointer-events: none;
+    z-index: 1;
+}
+ 
+#myProgressBar {
+    -webkit-appearance: none;
+    appearance: none;
+    position: relative;
+    width: 80vw;
+    height: 4px;
+    background: transparent; /* removed old gradient - fill div handles color now */
+    outline: none;
+    cursor: pointer;
+    z-index: 2;
+    margin-top : 1px;
+}
+ 
+/* Thumb - Chrome/Edge/Safari */
+#myProgressBar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ffffff;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+}
+ 
+/* Thumb - Firefox */
+#myProgressBar::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+}
+ 
+#myProgressBar::-moz-range-track {
+    height: 4px;
+    border-radius: 2px;
+    background: transparent;
+}
+ 
+/* Show thumb only on hover */
+#myProgressBar:hover::-webkit-slider-thumb {
+    opacity: 1;
+}
+ 
+#myProgressBar:hover::-moz-range-thumb {
+    opacity: 1;
+}
+ 
+#myProgressBar:hover {
+    height: 5px;
+}
+ 
